@@ -1,0 +1,17 @@
+spring:
+  h2:
+    console:
+      path: "/console"
+      enabled: true
+  datasource:
+    url: "jdbc:h2:file:./app-db"
+    username: "admin"
+    password: "12345"
+  jpa:
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+  flyway:
+    user: "admin"
+    password: "12345"
+    url: "jdbc:h2:file:./app-db"
