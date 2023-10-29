@@ -11,7 +11,7 @@ create table if not exists "question" (
     foreign key(survey_id) references "survey"(id)
 );
 
-create table if not exists "option" (
+create table if not exists "selection" (
     id int auto_increment primary key,
     question_id int not null,
     content varchar(1000) not null,
@@ -22,7 +22,9 @@ create table if not exists "option" (
 create table if not exists "votes" (
     id int auto_increment primary key,
     user_id int not null,
-    survey_id int not null
+    survey_id int not null,
+    foreign key (user_id) references "user"(id),
+    foreign key (survey_id) references "survey"(id)
 );
 
 
