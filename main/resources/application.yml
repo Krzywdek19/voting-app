@@ -8,6 +8,12 @@ spring:
     username: "admin"
     password: "12345"
   jpa:
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+      ddl-auto: validate
     properties:
       hibernate:
         globally_quoted_identifiers: true
